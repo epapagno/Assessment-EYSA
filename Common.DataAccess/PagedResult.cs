@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Common.Domain.Entities;
-using Support.Pagination;
+using Common.Infr.Support.Pagination;
 
-namespace DataAccess
+namespace Common.DataAccess
 {
     public class PagedResult<TEntity> : IPagedResult<TEntity>
     {

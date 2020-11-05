@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using IoC;
+using Common.Infr.IoC;
 
-namespace DataAccess.Support
+namespace Common.DataAccess.Support
 {
     internal class RepositoryFactory
     {

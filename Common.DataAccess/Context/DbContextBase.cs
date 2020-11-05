@@ -45,12 +45,12 @@ namespace Common.DataAccess.Context
             {
                 optionsBuilder.UseLoggerFactory(new LoggerFactory(new[] { this.loggerProvider }));
             }
-            optionsBuilder.UseOracle(this.configuration.GetConnectionString("WarehouseDatabase"));
+            optionsBuilder.UseNpgsql(this.configuration.GetConnectionString("WarehouseDatabase"));
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetAssembly(typeof(Common.DataAccess.Configuration.SysUsersETC)));
+            //modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetAssembly(typeof(Common.DataAccess.Configuration.SysUsersETC)));
             base.OnModelCreating(modelBuilder);
         }
     }

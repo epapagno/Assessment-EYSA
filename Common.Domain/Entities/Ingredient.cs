@@ -10,8 +10,7 @@ namespace Common.Domain.Entities
         [Key]
         public int Id { get; set; }
         public string Name { get; set; }
-        public virtual ICollection<Allergen> Allergens { get; set; }
-
-
+        public virtual ICollection<DishIngredient> DishIngredients { get; set; }
+        public virtual ICollection<Allergen> Allergens { get; set; }       
     }
 }

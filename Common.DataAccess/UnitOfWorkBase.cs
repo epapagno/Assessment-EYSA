@@ -6,10 +6,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using Common.Domain.Core;
-using DataAccess.Support;
-using IoC;
+using Common.DataAccess.Support;
 
-namespace DataAccess
+namespace Common.DataAccess
 {
     public abstract class UnitOfWorkBase : IUnitOfWork
     {
