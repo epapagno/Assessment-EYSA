@@ -26,7 +26,6 @@ namespace EYSA.Restaurant.Distributed.GraphQL
                 .Build();*/
 
             return WebHost.CreateDefaultBuilder(args)
-            .UseKestrel()
             .UseContentRoot(Directory.GetCurrentDirectory())
             .UseIISIntegration()
             .UseStartup<Startup>();
