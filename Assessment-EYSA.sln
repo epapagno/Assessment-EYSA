@@ -7,13 +7,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.DataAccess", "Common
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.Domain", "Common.Domain\Common.Domain.csproj", "{1799C71C-5C2D-4AFA-96B7-FFA1EE62D059}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Distributed.GraphQL", "Common.Distributed.GraphQL\Common.Distributed.GraphQL.csproj", "{D18E8566-4E18-45F2-901E-8BEBA37453B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.Distributed.GraphQL", "Common.Distributed.GraphQL\Common.Distributed.GraphQL.csproj", "{D18E8566-4E18-45F2-901E-8BEBA37453B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Infr.Logger", "Common.Infr.Logger\Common.Infr.Logger.csproj", "{1315977B-0640-4FDA-BAC5-448F96B1DCA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.Infr.Logger", "Common.Infr.Logger\Common.Infr.Logger.csproj", "{1315977B-0640-4FDA-BAC5-448F96B1DCA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Infr.Support", "Common.Infr.Support\Common.Infr.Support.csproj", "{317BF54C-878D-48BF-BF2F-AB11C9D583FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.Infr.Support", "Common.Infr.Support\Common.Infr.Support.csproj", "{317BF54C-878D-48BF-BF2F-AB11C9D583FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Infr.Ioc", "Common.Infr.Ioc\Common.Infr.Ioc.csproj", "{0076F687-176E-4B24-9EA2-F8A18ED9C7A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.Infr.Ioc", "Common.Infr.Ioc\Common.Infr.Ioc.csproj", "{0076F687-176E-4B24-9EA2-F8A18ED9C7A3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EYSA.Restaurant.DataAccess", "EYSA.Restaurant.DataAccess\EYSA.Restaurant.DataAccess.csproj", "{7F97B14C-92C1-4B9A-A5E0-C8F14B49B072}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EYSA.Restaurant.Distributed.GraphQL", "EYSA.Restaurant.Distributed.GraphQL\EYSA.Restaurant.Distributed.GraphQL.csproj", "{7D1A8536-916D-41E5-BF64-3D3DFFDED2AF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EYSA.Restaurant.Domain", "EYSA.Restaurant.Domain\EYSA.Restaurant.Domain.csproj", "{DDA86CFB-0A64-4417-B53C-6DBEE6C8F262}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EYSA.Restaurant.Infr.Bootstrapper", "EYSA.Restaurant.Infr.Bootstrapper\EYSA.Restaurant.Infr.Bootstrapper.csproj", "{6C8D84E6-17B6-4CAE-B2C9-3F86DD6E962B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Infr.Specification", "Common.Infr.Specification\Common.Infr.Specification.csproj", "{8E55AE4B-FA89-4C40-8991-960F19C07DB6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +55,26 @@ Global
 		{0076F687-176E-4B24-9EA2-F8A18ED9C7A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0076F687-176E-4B24-9EA2-F8A18ED9C7A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0076F687-176E-4B24-9EA2-F8A18ED9C7A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F97B14C-92C1-4B9A-A5E0-C8F14B49B072}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F97B14C-92C1-4B9A-A5E0-C8F14B49B072}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F97B14C-92C1-4B9A-A5E0-C8F14B49B072}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F97B14C-92C1-4B9A-A5E0-C8F14B49B072}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D1A8536-916D-41E5-BF64-3D3DFFDED2AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D1A8536-916D-41E5-BF64-3D3DFFDED2AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D1A8536-916D-41E5-BF64-3D3DFFDED2AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D1A8536-916D-41E5-BF64-3D3DFFDED2AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDA86CFB-0A64-4417-B53C-6DBEE6C8F262}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDA86CFB-0A64-4417-B53C-6DBEE6C8F262}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDA86CFB-0A64-4417-B53C-6DBEE6C8F262}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDA86CFB-0A64-4417-B53C-6DBEE6C8F262}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C8D84E6-17B6-4CAE-B2C9-3F86DD6E962B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C8D84E6-17B6-4CAE-B2C9-3F86DD6E962B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C8D84E6-17B6-4CAE-B2C9-3F86DD6E962B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C8D84E6-17B6-4CAE-B2C9-3F86DD6E962B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E55AE4B-FA89-4C40-8991-960F19C07DB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E55AE4B-FA89-4C40-8991-960F19C07DB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E55AE4B-FA89-4C40-8991-960F19C07DB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E55AE4B-FA89-4C40-8991-960F19C07DB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

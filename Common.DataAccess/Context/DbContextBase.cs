@@ -21,36 +21,21 @@ namespace Common.DataAccess.Context
             this.configuration = configuration;
         }
 
-        public virtual async Task<long> GetNextValueSequence(string sequenceName)
-        {
-            long value;
-            using (var command = Database.GetDbConnection().CreateCommand())
-            {
-                command.CommandText = $"SELECT {sequenceName}.nextval value FROM dual";
-                if (command.Connection.State != ConnectionState.Open)
-                {
-                    command.Connection.Open();
-                }
-                DbDataReader reader = await command.ExecuteReaderAsync();
-                await reader.ReadAsync();
-                value = reader.GetInt64(0);
-            }
-            return value;
-        }
-
-
+        
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (this.loggerProvider != null)
             {
                 optionsBuilder.UseLoggerFactory(new LoggerFactory(new[] { this.loggerProvider }));
             }
-            optionsBuilder.UseNpgsql(this.configuration.GetConnectionString("WarehouseDatabase"));
+            //optionsBuilder.UseNpgsql(this.configuration.GetConnectionString("Asessment-EYSA"));
+            optionsBuilder.UseNpgsql("Host=localhost;Database=Asessment-EYSA;Username=admin;Password=admin");
+            
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetAssembly(typeof(Common.DataAccess.Configuration.SysUsersETC)));
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetAssembly(typeof(Common.DataAccess.Configuration.DishIngredientETC)));
             base.OnModelCreating(modelBuilder);
         }
     }

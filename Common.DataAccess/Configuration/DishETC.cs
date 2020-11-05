@@ -13,9 +13,14 @@ namespace Common.DataAccess.Configuration
             builder.Property("DishId");
             builder.Property("IngredientId");
 
-            /*builder.HasOne(i => i.Dish)
-                .WithOne(i => i.Ingr)
-                .HasForeignKey(i => new { i.PaisId, i.CharTypeId });*/
+            builder.HasOne(i => i.Dish)
+
+                .WithMany(i => i.DishIngredients)
+                .HasForeignKey(i => i.DishId);
+
+            builder.HasOne(i => i.Ingredient)
+            .WithMany(i => i.DishIngredients)
+            .HasForeignKey(i => i.IngredientId);
         }
     }
 }
