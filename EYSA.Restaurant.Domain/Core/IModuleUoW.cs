@@ -9,5 +9,7 @@ namespace EYSA.Restaurant.Domain
     public interface IModuleUoW : IUnitOfWork
     {
         IDishRepository DishRepository { get; }
+        IIngredientRepository IngredientRepository { get; }
+        IAllergenRepository AllergenRepository { get; }
     }
 }

@@ -17,6 +17,8 @@ namespace EYSA.Restaurant.DataAccess.Core
         }
 
         public IDishRepository DishRepository => base.GetRepository<IDishRepository>();
+        public IAllergenRepository AllergenRepository => base.GetRepository<IAllergenRepository>();
+        public IIngredientRepository IngredientRepository => base.GetRepository<IIngredientRepository>();
 
         protected override DbContext CreateContext() => new ModuleContext(base.loggerProvider, base.configuration);
     }

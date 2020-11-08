@@ -11,23 +11,23 @@ namespace EYSA.Restaurant.Domain.Queries
 {
     public class FindDishSpecification : Specification<Dish>, ISpecification<Dish>
     {
-        public FindDishSpecification(string dishName, int dishId)
+        public FindDishSpecification(string name, int dishId)
         {
-            DishName = dishName;
+            Name = name;
             DishId = dishId;
         }
 
         public int DishId { get; set; }
-        public string DishName { get; set; }
+        public string Name { get; set; }
 
         public override Expression<Func<Dish, bool>> SatisfiedBy()
         {
             Expression<Func<Dish, bool>> filter = 
                 i => i.Id == DishId;
 
-            if(string.IsNullOrEmpty(DishName))
+            if(!string.IsNullOrEmpty(Name))
             {
-                filter.And(i => i.Name.ToLower().Equals(DishName.ToLower()));
+                filter.And(i => i.Name.ToLower().Equals(Name.ToLower()));
             }
             
 

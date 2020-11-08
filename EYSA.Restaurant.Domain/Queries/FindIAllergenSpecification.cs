@@ -10,9 +10,9 @@ using Common.Domain.Entities;
 
 namespace EYSA.Restaurant.Domain.Queries
 {
-    public class FindIngredientSpecification : Specification<Ingredient>, ISpecification<Ingredient>
+    public class FindAllergenSpecification : Specification<Allergen>, ISpecification<Allergen>
     {
-        public FindIngredientSpecification(string name, int id)
+        public FindAllergenSpecification(string name, int id)
         {
             Name = name;
             Id = id;
@@ -21,9 +21,9 @@ namespace EYSA.Restaurant.Domain.Queries
         public int Id { get; set; }
         public string Name { get; set; }
 
-        public override Expression<Func<Ingredient, bool>> SatisfiedBy()
+        public override Expression<Func<Allergen, bool>> SatisfiedBy()
         {
-            Expression<Func<Ingredient, bool>> filter =
+            Expression<Func<Allergen, bool>> filter =
                 i => i.Name.ToLower().Equals(Name.ToLower());
 
             return filter;

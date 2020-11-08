@@ -15,18 +15,18 @@ using Common.Domain.CursorResult;
 
 namespace EYSA.Restaurant.DataAccess.Repositories
 {
-    public class DishRepository : IDishRepository
+    public class IngredientRepository : IIngredientRepository
     {
         private readonly IModuleContext context;
 
-        public DishRepository(IModuleContext context)
+        public IngredientRepository(IModuleContext context)
         {
             this.context = context;
         }
 
-        public async Task<Dish> FindDish(FindDishSpecification filter)
+        public async Task<Ingredient> FindIngredient(FindIngredientSpecification filter)
         {
-            IEnumerable<Dish> result = await this.context.Dish.Where(filter.SatisfiedBy()).ToListAsync();
+            IEnumerable<Ingredient> result = await this.context.Ingredient.Where(filter.SatisfiedBy()).ToListAsync();
 
             return result.OrderBy(i => i.Name).FirstOrDefault();
         }

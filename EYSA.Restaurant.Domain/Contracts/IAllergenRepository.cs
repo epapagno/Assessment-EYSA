@@ -6,8 +6,8 @@ using Common.Domain.CursorResult;
 
 namespace EYSA.Restaurant.Domain.Contracts
 {
-    public interface IDishRepository
+    public interface IAllergenRepository
     {
-        Task<Dish> FindDish(FindDishSpecification filter);
+        Task<Allergen> FindAllergen(FindAllergenSpecification filter);
     }
 }
