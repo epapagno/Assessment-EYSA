@@ -9,16 +9,14 @@ namespace Common.DataAccess.Configuration
     {
         public void Configure(EntityTypeBuilder<DishIngredient> builder)  
         {
-            builder.ToTable("DishIngredient").HasKey(i => new { i.Id });
-            builder.Property("DishId");
-            builder.Property("IngredientId");
+            builder.ToTable("DishIngredient").HasKey(i => new { i.DishId, i.IngredientId });
 
             builder.HasOne(i => i.Dish)
-                .WithMany(i => i.DishIngredients)
+                .WithMany(i => i.Ingredients)
                 .HasForeignKey(i => i.DishId);
 
             builder.HasOne(i => i.Ingredient)
-            .WithMany(i => i.DishIngredients)
+            .WithMany(i => i.Dishes)
             .HasForeignKey(i => i.IngredientId);
         }
     }

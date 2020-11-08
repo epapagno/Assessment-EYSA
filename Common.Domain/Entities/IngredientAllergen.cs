@@ -8,7 +8,6 @@ namespace Common.Domain.Entities
 {
     public class IngredientAllergen
     {
-        [Key, Column(Order = 1)]
         public int Id { get; set; }
         public int AllergenId { get; set; }
         public int IngredientId { get; set; }

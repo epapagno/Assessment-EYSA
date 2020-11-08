@@ -12,6 +12,6 @@ namespace EYSA.Restaurant.DataAccess.Context
         DbSet<Ingredient> Ingredient { get; }
         DbSet<Allergen> Allergen { get; }
         DbSet<DishIngredient> DishIngredient { get; }
-
+        DbSet<IngredientAllergen> IngredientAllergen { get; }
     }
 }

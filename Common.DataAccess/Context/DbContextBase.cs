@@ -30,7 +30,7 @@ namespace Common.DataAccess.Context
             }
 
             //optionsBuilder.UseNpgsql(this.configuration.GetConnectionString("Asessment-EYSA"));
-            optionsBuilder.UseNpgsql("Server=localhost;Port=5432;Database=Asessment-EYSA;User Id=postgres;Password=3p4p4gn0;");
+            optionsBuilder.UseNpgsql("Server=localhost;Port=5432;Database=Asessment-EYSA;User Id=postgres;Password=admin;");
             
         }
 

@@ -12,9 +12,6 @@ namespace Common.DataAccess.Configuration
             builder.ToTable("Allergen").HasKey(i => new { i.Id });
             builder.Property("Id");
             builder.Property("Name");
-
-            builder.HasMany(i => i.Ingredient);
-
         }
     }
 }

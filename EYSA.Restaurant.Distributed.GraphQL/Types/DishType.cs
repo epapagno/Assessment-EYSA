@@ -16,7 +16,7 @@ namespace EYSA.Restaurant.Distributed.GraphQL.Types
             // Generación ObjectGraphType: Dish
             Field(i => i.Id);
             Field(i => i.Name);
-            Field(i => i.DishIngredients, type: typeof(ListGraphType<DishIngredientType>));
+            Field(i => i.Ingredients, type: typeof(ListGraphType<DishIngredientType>));
         }
     }
 }

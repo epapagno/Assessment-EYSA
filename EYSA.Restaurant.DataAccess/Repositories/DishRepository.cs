@@ -26,7 +26,7 @@ namespace EYSA.Restaurant.DataAccess.Repositories
 
         public async Task<Dish> FindDish(FindDishSpecification filter)
         {
-            IEnumerable<Dish> result = await this.context.Dish.Where(filter.SatisfiedBy()).ToListAsync();
+            IEnumerable<Dish> result = await this.context.Dish.Include(dd => dd.Ingredients).Where(filter.SatisfiedBy()).ToListAsync();
 
             return result.OrderBy(i => i.Name).FirstOrDefault();
         }

@@ -12,10 +12,6 @@ namespace Common.DataAccess.Configuration
             builder.ToTable("Dish").HasKey(i => new { i.Id});
             builder.Property("Id");
             builder.Property("Name");
-
-            builder.HasMany(i => i.DishIngredients)
-                .WithOne(i => i.Dish)
-                .HasForeignKey(i => i.DishId);
         }
     }
 }

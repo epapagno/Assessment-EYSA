@@ -15,7 +15,7 @@ namespace EYSA.Restaurant.Distributed.GraphQL.Types
             Field(i => i.Id);
             Field(i => i.Name);
             Field(i => i.Allergens, type: typeof(ListGraphType<AllergenType>));
-            Field(i => i.DishIngredients, type: typeof(ListGraphType<DishIngredientType>));
+            Field(i => i.Dishes, type: typeof(ListGraphType<DishIngredientType>));
         }        
     }
 }

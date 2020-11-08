@@ -9,9 +9,7 @@ namespace Common.DataAccess.Configuration
     {
         public void Configure(EntityTypeBuilder<IngredientAllergen> builder)  
         {
-            builder.ToTable("IngredientAllergen").HasKey(i => new { i.Id });
-            builder.Property("AllergenId");
-            builder.Property("IngredientId");
+            builder.ToTable("IngredientAllergen").HasKey(i => new { i.AllergenId, i.IngredientId });
 
             builder.HasOne(i => i.Allergen)
                 .WithMany(i => i.Ingredient)
