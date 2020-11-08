@@ -5,22 +5,17 @@ using Common.Domain.Entities;
 
 namespace Common.DataAccess.Configuration
 {
-    public class DishIngredientETC : IEntityTypeConfiguration<DishIngredient>
+    public class DishETC : IEntityTypeConfiguration<Dish>
     {
-        public void Configure(EntityTypeBuilder<DishIngredient> builder)  
+        public void Configure(EntityTypeBuilder<Dish> builder)  
         {
-            builder.ToTable("DishIngredient").HasKey(i => new { i.DishId, i.IngredientId});
-            builder.Property("DishId");
-            builder.Property("IngredientId");
+            builder.ToTable("Dish").HasKey(i => new { i.Id});
+            builder.Property("Id");
+            builder.Property("Name");
 
-            builder.HasOne(i => i.Dish)
-
-                .WithMany(i => i.DishIngredients)
+            builder.HasMany(i => i.DishIngredients)
+                .WithOne(i => i.Dish)
                 .HasForeignKey(i => i.DishId);
-
-            builder.HasOne(i => i.Ingredient)
-            .WithMany(i => i.DishIngredients)
-            .HasForeignKey(i => i.IngredientId);
         }
     }
 }

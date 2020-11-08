@@ -28,8 +28,9 @@ namespace Common.DataAccess.Context
             {
                 optionsBuilder.UseLoggerFactory(new LoggerFactory(new[] { this.loggerProvider }));
             }
+
             //optionsBuilder.UseNpgsql(this.configuration.GetConnectionString("Asessment-EYSA"));
-            optionsBuilder.UseNpgsql("Host=localhost;Database=Asessment-EYSA;Username=admin;Password=admin");
+            optionsBuilder.UseNpgsql("Server=localhost;Port=5432;Database=Asessment-EYSA;User Id=postgres;Password=3p4p4gn0;");
             
         }
 
