@@ -11,7 +11,6 @@ namespace EYSA.Restaurant.Distributed.GraphQL.Types
     {
         public IngredientType()
         {
-            // Generación ObjectGraphType: NOTIFICATIONS
             Field(i => i.Id);
             Field(i => i.Name);
             Field(i => i.Allergens, type: typeof(ListGraphType<AllergenType>));

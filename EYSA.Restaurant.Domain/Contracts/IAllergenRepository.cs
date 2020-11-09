@@ -9,5 +9,6 @@ namespace EYSA.Restaurant.Domain.Contracts
     public interface IAllergenRepository
     {
         Task<Allergen> FindAllergen(FindAllergenSpecification filter);
+        Task<Allergen> CreateAllergen(Allergen allergen);
     }
 }

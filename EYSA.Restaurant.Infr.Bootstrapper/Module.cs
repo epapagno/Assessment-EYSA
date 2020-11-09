@@ -24,6 +24,8 @@ namespace EYSA.Restaurant.Infr.Bootstrapper
             this.container.Register<IModuleContext, ModuleContext>().InTransientScope();
             this.container.Register<IModuleUoW, ModuleUoW>().InTransientScope();
             this.container.Register<IDishRepository, DishRepository>().InTransientScope();
+            this.container.Register<IAllergenRepository, AllergenRepository>().InTransientScope();
+            this.container.Register<IIngredientRepository, IngredientRepository>().InTransientScope();
         }
     }
 }

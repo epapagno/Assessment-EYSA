@@ -12,19 +12,17 @@ namespace EYSA.Restaurant.Domain.Queries
 {
     public class FindAllergenSpecification : Specification<Allergen>, ISpecification<Allergen>
     {
-        public FindAllergenSpecification(string name, int id)
+        public FindAllergenSpecification(int id)
         {
-            Name = name;
             Id = id;
         }
 
         public int Id { get; set; }
-        public string Name { get; set; }
 
         public override Expression<Func<Allergen, bool>> SatisfiedBy()
         {
             Expression<Func<Allergen, bool>> filter =
-                i => i.Name.ToLower().Equals(Name.ToLower());
+                i => i.Id == Id;
 
             return filter;
         }

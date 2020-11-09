@@ -3,13 +3,14 @@ using Common.Domain.Entities;
 
 namespace EYSA.Restaurant.Distributed.GraphQL.InputTypes
 {
-    public class AllergenInputType : InputObjectGraphType<Allergen>
+    public class DishInputType : InputObjectGraphType<Dish>
     {
-        public AllergenInputType()
+        public DishInputType()
         {
-            Name = "AllergenInput";
+            Name = "DishInput";
             Field(i => i.Id, nullable: true);
             Field(i => i.Name);
+            Field(i => i.Ingredients, type: typeof(ListGraphType<IngredientInputType>));
         }
     }
 }

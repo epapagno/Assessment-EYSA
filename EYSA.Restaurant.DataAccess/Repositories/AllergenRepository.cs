@@ -24,9 +24,15 @@ namespace EYSA.Restaurant.DataAccess.Repositories
             this.context = context;
         }
 
+        public async Task<Allergen> CreateAllergen(Allergen allergen)
+        {
+            context.Allergen.Add(allergen);
+            return allergen;
+        }
+
         public async Task<Allergen> FindAllergen(FindAllergenSpecification filter)
         {
-            IEnumerable<Allergen> result = await this.context.Allergen.Where(filter.SatisfiedBy()).ToListAsync();
+            IEnumerable<Allergen> result = await this.context.Allergen.Include(aa => aa.Ingredient).ThenInclude(ii => ii.Ingredient).Where(filter.SatisfiedBy()).ToListAsync();
 
             return result.OrderBy(i => i.Name).FirstOrDefault();
         }

@@ -9,5 +9,6 @@ namespace EYSA.Restaurant.Domain.Contracts
     public interface IIngredientRepository
     {
         Task<Ingredient> FindIngredient(FindIngredientSpecification filter);
+        Task<Ingredient> CreateIngredient(Ingredient ingredient);
     }
 }

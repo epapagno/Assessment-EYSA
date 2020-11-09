@@ -24,9 +24,15 @@ namespace EYSA.Restaurant.DataAccess.Repositories
             this.context = context;
         }
 
+        public async Task<Dish> CreateDish(Dish dish)
+        {
+            context.Dish.Add(dish);
+            return dish;
+        }
+
         public async Task<Dish> FindDish(FindDishSpecification filter)
         {
-            IEnumerable<Dish> result = await this.context.Dish.Include(dd => dd.Ingredients).Where(filter.SatisfiedBy()).ToListAsync();
+            IEnumerable<Dish> result = await this.context.Dish.Include(dd => dd.Ingredients).ThenInclude(dd => dd.Ingredient).Where(filter.SatisfiedBy()).ToListAsync();
 
             return result.OrderBy(i => i.Name).FirstOrDefault();
         }

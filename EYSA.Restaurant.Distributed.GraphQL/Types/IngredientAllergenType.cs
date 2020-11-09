@@ -7,13 +7,13 @@ using Common.Domain.Entities;
 
 namespace EYSA.Restaurant.Distributed.GraphQL.Types
 {
-    public class DishIngredientType : ObjectGraphType<DishIngredient>
+    public class IngredientAllergenType : ObjectGraphType<IngredientAllergen>
     {
-        public DishIngredientType()
+        public IngredientAllergenType()
         {
-            Field(i => i.DishId);
+            Field(i => i.AllergenId);
             Field(i => i.IngredientId);
-            Field(i => i.Dish, type: typeof(DishType));
+            Field(i => i.Allergen, type: typeof(AllergenType));
             Field(i => i.Ingredient, type: typeof(IngredientType));
         }
     }

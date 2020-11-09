@@ -23,7 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EYSA.Restaurant.Domain", "E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EYSA.Restaurant.Infr.Bootstrapper", "EYSA.Restaurant.Infr.Bootstrapper\EYSA.Restaurant.Infr.Bootstrapper.csproj", "{6C8D84E6-17B6-4CAE-B2C9-3F86DD6E962B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Infr.Specification", "Common.Infr.Specification\Common.Infr.Specification.csproj", "{8E55AE4B-FA89-4C40-8991-960F19C07DB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.Infr.Specification", "Common.Infr.Specification\Common.Infr.Specification.csproj", "{8E55AE4B-FA89-4C40-8991-960F19C07DB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EYSA.Restaurant.Domain.Test", "EYSA.Restaurant.Domain.Test\EYSA.Restaurant.Domain.Test.csproj", "{3FF24BA0-45B6-4DBE-A76D-0D5A5AF69743}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{8E55AE4B-FA89-4C40-8991-960F19C07DB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E55AE4B-FA89-4C40-8991-960F19C07DB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E55AE4B-FA89-4C40-8991-960F19C07DB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FF24BA0-45B6-4DBE-A76D-0D5A5AF69743}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FF24BA0-45B6-4DBE-A76D-0D5A5AF69743}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FF24BA0-45B6-4DBE-A76D-0D5A5AF69743}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FF24BA0-45B6-4DBE-A76D-0D5A5AF69743}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

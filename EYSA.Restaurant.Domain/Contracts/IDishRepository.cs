@@ -9,5 +9,6 @@ namespace EYSA.Restaurant.Domain.Contracts
     public interface IDishRepository
     {
         Task<Dish> FindDish(FindDishSpecification filter);
+        Task<Dish> CreateDish(Dish dish);
     }
 }

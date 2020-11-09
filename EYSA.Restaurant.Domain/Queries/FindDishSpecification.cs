@@ -11,25 +11,17 @@ namespace EYSA.Restaurant.Domain.Queries
 {
     public class FindDishSpecification : Specification<Dish>, ISpecification<Dish>
     {
-        public FindDishSpecification(string name, int dishId)
+        public FindDishSpecification(int id)
         {
-            Name = name;
-            DishId = dishId;
+            Id = id;
         }
 
-        public int DishId { get; set; }
-        public string Name { get; set; }
+        public int Id { get; set; }
 
         public override Expression<Func<Dish, bool>> SatisfiedBy()
         {
             Expression<Func<Dish, bool>> filter = 
-                i => i.Id == DishId;
-
-            if(!string.IsNullOrEmpty(Name))
-            {
-                filter.And(i => i.Name.ToLower().Equals(Name.ToLower()));
-            }
-            
+                i => i.Id == Id;
 
             return filter;
         }
