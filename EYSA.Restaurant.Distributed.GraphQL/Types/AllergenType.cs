@@ -9,7 +9,7 @@ namespace EYSA.Restaurant.Distributed.GraphQL.Types
         {
             Field(i => i.Id);
             Field(i => i.Name);
-            Field(i => i.Ingredient, type: typeof(IngredientType));
+            Field(i => i.Ingredient, type: typeof(IngredientAllergenType));
         }
     }
 }
