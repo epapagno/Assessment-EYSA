@@ -10,7 +10,7 @@ namespace EYSA.Restaurant.Distributed.GraphQL.InputTypes
             Name = "DishInput";
             Field(i => i.Id, nullable: true);
             Field(i => i.Name);
-            Field(i => i.Ingredients, type: typeof(ListGraphType<IngredientInputType>));
+            Field(i => i.Ingredients, type: typeof(ListGraphType<IngredientInputType>), nullable: true);
         }
     }
 }

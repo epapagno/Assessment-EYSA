@@ -8,7 +8,7 @@ namespace EYSA.Restaurant.Distributed.GraphQL.InputTypes
         public IngredientInputType()
         {
             Name = "IngredientInput";
-            Field(i => i.Id);
+            Field(i => i.Id, nullable: true);
             Field(i => i.Name);
         }
     }

@@ -9,6 +9,7 @@ namespace Common.Domain.Entities
     public class Dish
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string Name { get; set; } 
         public virtual ICollection<DishIngredient> Ingredients { get; set; }

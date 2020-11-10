@@ -157,8 +157,8 @@ namespace EYSA.Restaurant.Distributed.GraphQL.Configuration
                         Dish = entity
                     };
 
-                    var repStoreDetailProjectionsVariableSetter = new PropertyVariableSetter<DishIngredient>(dishIngredient, (Dictionary<string, object>)dishIngredientObj);
-                    repStoreDetailProjectionsVariableSetter.Assign("id", i => i.IngredientId);
+                    var dishIngredientVariableSetter = new PropertyVariableSetter<DishIngredient>(dishIngredient, (Dictionary<string, object>)dishIngredientObj);
+                    dishIngredientVariableSetter.Assign("id", i => i.IngredientId);
 
                     dishIngredients.Add(dishIngredient);
                 }                
