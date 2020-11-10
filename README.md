@@ -25,3 +25,9 @@ Los Common son aquellos proyectos base que utilizaremos en cada orquestador. No 
 
 La idea es que con los valores devueltos articular el objeto recibido con la informacion que nos interesa averiguar.
 Esta preaparado para que se puede serguir trabajando en el servicio, escalando en base a la informacion que se requiera.
+
+Hay un backup de la base de datos que he utilizado que se encuentra desarrollada en PostgreSQL (decidi usarlo por recomendacion de un colega, dado que no tenia una instancia de SQL para instalar, me resulto muy comodo y OPEN SOURCE ;) , lo recomiendo) en:
+
+DataBaseBackUp/DataBaseBackUp.sql
+
+
